@@ -49,7 +49,7 @@ python main.py
 ```
 
 ### Arguments
-Custom network configs, weights, and image evaluation are available. Format examples are provided in the Appendix folder.
+Custom network configs, weights, and image evaluation are available. Format examples are provided in the `docs` folder.
 
 Parser example:
 ```
@@ -59,4 +59,4 @@ python main.py \
 > --imgfilelistname <imgfilelistname>.txt
 ```
 
-If `imgfilelistname.txt` is provided, the program will generate an `output.txt` file containing the predicted classes. An example file is provided in the Appendix folder.
+If `imgfilelistname.txt` is provided, the program will generate an `output.txt` file containing the predicted classes. An example file is provided in the `docs` folder.
