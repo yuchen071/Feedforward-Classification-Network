@@ -118,9 +118,7 @@ Also known as **Glorot Normal** or **He Initialization**
 
 Normal distributed random values with mean 0 and standard deviation
 
-$$
-\sigma=\sqrt{\frac{2}{n_{in}+n_{out}}}
-$$
+$$ \\sigma=\\sqrt{\\frac{2}{n\_{in}+n\_{out}}} $$
 
 where ![formula](https://render.githubusercontent.com/render/math?math=n_{in}) is the number of input nodes, and ![formula](https://render.githubusercontent.com/render/math?math=n_{out}) is the number of output nodes in the weight matrix
 
