@@ -147,16 +147,20 @@ Epoch 200: Train loss: 0.0324, Train acc: 99.47%, Test loss: 0.0432, Test acc: 9
 
 ### Discussion
 
-From this formula for deriving the weight values:  
+From this formula for deriving the weight values:
+
 ![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%3D%20%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%29%7D_j%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%5Cfrac%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D%7B%5Cpartial%20z%5E%7B%28L%29%7D_j%7D%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D&mode=display)
 
-we can get:  
+we can get:
+
 ![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%3D%20a%5E%7B%28L-1%29%7D_k%20%5Csigma%27%28z%5E%7B%28L%29%7D_j%29%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D&mode=display)
 
-where:  
+where:
+
 ![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D%20%3D%20%5Csum%5E%7Bn_%7BL%2B1%7D-1%7D_%7Bj%3D0%7D%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_%7Bj%7D%7D%20%5Cfrac%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D%20%3D%20%5Csum%5E%7Bn_%7BL%2B1%7D-1%7D_%7Bj%3D0%7D%20w%5E%7B%28L%2B1%29%7D_%7Bjk%7D%5Csigma%27%28z%5E%7B%28L%2B1%29%7D_j%29%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D&mode=display)
 
-or in this case at the last layer with Cross Entropy and Softmax:  
+or in this case at the last layer with Cross Entropy and Softmax:
+
 ![formula](https://render.githubusercontent.com/render/math?math=%5Csigma%27%28z%5E%7B%28last%29%7D%29%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28last%29%7D%7D%20%3D%20%5Chat%7By%7D%20-%20y&mode=display)
 
 For **weights with initial values of 0**, the partial derivative ![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_%7Bj%7D%7D%20%3D%20w%5E%7B%28L%2B1%29%7D_%7Bjk%7D%20%3D%200&mode=display).
