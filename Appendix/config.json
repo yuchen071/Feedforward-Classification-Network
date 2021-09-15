@@ -1,0 +1,23 @@
+{
+    "nn": {
+        "layer1":{
+            "input_dim": 1024,
+            "output_dim": 2048,
+            "act": "relu"
+        },
+        "layer2":{
+            "input_dim": 2048,
+            "output_dim": 512,
+            "act": "relu"
+        },
+        "output":{
+            "input_dim": 512,
+            "output_dim": 6,
+            "act": "softmax"
+        }
+    },
+    "epoch": 20,
+    "lr": 0.001,
+    "batch_size": 2048,
+    "criterion": "cross_entropy"
+}
