@@ -40,3 +40,9 @@ python main.py \
 
 If `<imglist>.txt` is provided, the program will generate an `output.txt` file containing the predicted classes. An example file is provided in the `docs` folder.  
 Images for evaluation must be `28 x 28 x 1` in shape.
+
+## Resources
+The Neural Network video playlist from 3blue1brown helped me greatly in completing this project and understanding the fundamentals of backpropagation. Highly recommended if you want to give this project a try yourself.
+
+[3blue1brown Youtube channel](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)  
+[Neural Network Playlist](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)  
