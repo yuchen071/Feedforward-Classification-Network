@@ -1,4 +1,4 @@
-# HW1 Report
+# Report
 
 ## 1(a)
 
