@@ -1,0 +1,5 @@
+<absolute folder path>/img1.jpeg
+<absolute folder path>/img2.jpeg
+<absolute folder path>/img3.jpeg
+<absolute folder path>/img4.jpeg
+<absolute folder path>/img5.jpeg

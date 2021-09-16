@@ -7,7 +7,7 @@
 * Epochs: 100
 * Learning rate: 1e-3
 * Batch size: 200
-* Network layers: `[1024, 2048, 512, 6]`
+* Network layers: `[784, 2048, 512, 10]`
 * Activation functions: `[ReLU, ReLU, Softmax]`
 * Loss funciton: Cross entropy
 * Weight initializer: Xavier Normal (He) initializer

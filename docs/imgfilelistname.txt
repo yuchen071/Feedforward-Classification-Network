@@ -1,5 +1,0 @@
-<absolute folder path>/004211.jpeg
-<absolute folder path>/001531.jpeg
-<absolute folder path>/002145.jpeg
-<absolute folder path>/009839.jpeg
-<absolute folder path>/005543.jpeg
