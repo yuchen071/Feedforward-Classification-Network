@@ -18,9 +18,11 @@ root
   └─ mnist.npz
 ```
 ### Dependecies
-* numpy  
-* matplotlib  
-* Pillow
+```
+numpy==1.20.2
+matplotlib==3.3.4
+Pillow==8.3.2
+```
 
 ## Train
 Run the following code to train with default parameters:  
