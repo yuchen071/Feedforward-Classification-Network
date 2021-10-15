@@ -1,21 +1,15 @@
 # Feedforward Classification Network from Scratch
-## Instructions
-Implement a feedforward neural network (FNN) model by yourself to classify the MNIST dataset. Deep learning packages such as Pytorch and Tensorflow are not allowed.
-
-1. Design a FNN model architecture and perform the random initialization for model weights. Run backpropagation algorithm and use mini-batch SGD (stochastic gradient descent) to optimize the parameters
-
-    (a). Plot the learning curves and the accuracy of classification versus the number of iterations until convergence for training data as well as test data.  
-    (b). Repeat 1(a) with different batch sizes.  
-    (c). Repeat 1(a) by performing zero initialization for the model weights.  
+## About the Project
+Implement a feedforward neural network (FNN) model by yourself to classify the MNIST dataset without using deep learning packages such as PyTorch or Tensorflow.
 
 ## Requirements
 MNIST dataset source: https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz 
 
 The root folder should be structured as follows:
 ```
-root
-  ├─ main.py
-  └─ mnist.npz
+📁 root
+  ├─ 📄 main.py
+  └─ 📄 mnist.npz
 ```
 ### Dependecies
 ```
@@ -24,7 +18,8 @@ matplotlib==3.3.4
 Pillow==8.3.2
 ```
 
-## Train
+## Usage
+### Train
 Run the following code to train with default parameters:  
 ```
 python main.py
@@ -42,6 +37,9 @@ python main.py \
 
 If `<imglist>.txt` is provided, the program will generate an `output.txt` file containing the predicted classes. An example file is provided in the `docs` folder.  
 Images for evaluation must be `28 x 28 x 1` in shape.
+
+## Results
+[Report](https://github.com/yuchen071/Feedforward-Classification-Network/tree/main/results)
 
 ## Resources
 The Neural Network video playlist from 3blue1brown helped me greatly in completing this project and understanding the fundamentals of backpropagation. Highly recommended if you want to give this project a try yourself.
