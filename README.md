@@ -18,7 +18,7 @@ matplotlib==3.3.4
 Pillow==8.3.2
 ```
 
-## Usage
+## How to use
 ### Train
 Run the following code to train with default parameters:  
 ```
