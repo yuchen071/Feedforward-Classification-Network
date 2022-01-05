@@ -17,12 +17,12 @@ import time
 #%% Default paramsd
 PATH_MNIST = "mnist.npz"
 
-BATCH_SIZE = 500
-EPOCHS = 10
+BATCH_SIZE = 100
+EPOCHS = 20
 LR = 1e-3
 
-NN = [[784,2048],[2048,512],[512,10]]
-ACT = ["relu", "relu", "softmax"]
+NN = [[784,2048],[2048,1024],[1024,512],[512,10]]
+ACT = ["relu", "relu", "relu", "softmax"]
 # ACT = ["leaky relu", "leaky relu", "softmax"]
 # ACT = ["softplus", "softplus", "softmax"]
 CRIT = "cross_entropy"
@@ -317,7 +317,7 @@ def train(train_config, dataset):
 
                 # mini-batch SGD
                 weight[layer_id] = weight[layer_id] - lr * dE_dw[layer_id] / batch_len
-                # bias[layer_id] = bias[layer_id] - lr * dE_db[layer_id] / batch_len
+                bias[layer_id] = bias[layer_id] - lr * dE_db[layer_id] / batch_len
 
         ave_loss = np.mean(train_loss)
         acc = train_correct / len(dataset["train_images"])
