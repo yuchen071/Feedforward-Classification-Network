@@ -13,9 +13,9 @@ The root folder should be structured as follows:
 ```
 ### Dependecies
 ```
-numpy==1.20.2
-matplotlib==3.3.4
-Pillow==8.3.2
+matplotlib==3.5.1
+numpy==1.22.0
+Pillow==9.0.0
 ```
 
 ## How to use
