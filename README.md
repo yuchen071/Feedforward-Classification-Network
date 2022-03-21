@@ -15,7 +15,7 @@ The root folder should be structured as follows:
 ```
 matplotlib==3.5.1
 numpy==1.22.0
-Pillow==9.0.0
+Pillow==9.0.1
 ```
 
 ## How to use
