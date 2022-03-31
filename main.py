@@ -21,8 +21,8 @@ BATCH_SIZE = 100
 EPOCHS = 20
 LR = 1e-3
 
-NN = [[784,2048],[2048,1024],[1024,512],[512,10]]
-ACT = ["relu", "relu", "relu", "softmax"]
+NN = [[784,2048],[2048,512],[512,10]]
+ACT = ["relu", "relu", "softmax"]
 # ACT = ["leaky relu", "leaky relu", "softmax"]
 # ACT = ["softplus", "softplus", "softmax"]
 CRIT = "cross_entropy"

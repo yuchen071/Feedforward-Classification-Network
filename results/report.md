@@ -16,7 +16,7 @@
 
 | | |
 |:--:|:--:|
-| ![Loss](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/Loss.png) | ![Acc](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/Accuracy.png) |
+| ![Loss](imgs/Loss.png) | ![Acc](imgs/Accuracy.png) |
 
 Final epoch data: Train loss: 0.0735, Train acc: 98.22%, Test loss: 0.0889, Test acc: 97.76%
 
@@ -29,8 +29,8 @@ Final epoch data: Train loss: 0.0735, Train acc: 98.22%, Test loss: 0.0889, Test
 
 | Iteration | Epoch |
 |:--:|:--:|
-| ![SB_Loss_it](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/SB_Loss_it.png) | ![SB_Loss_ep](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/SB_Loss_ep.png) |
-| ![SB_Acc_it](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/SB_Acc_it.png) | ![SB_Acc_ep](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/SB_Acc_ep.png) |
+| ![SB_Loss_it](imgs/SB_Loss_it.png) | ![SB_Loss_ep](imgs/SB_Loss_ep.png) |
+| ![SB_Acc_it](imgs/SB_Acc_it.png) | ![SB_Acc_ep](imgs/SB_Acc_ep.png) |
 
 Elapsed time: 00:13:05
 
@@ -50,8 +50,8 @@ Epoch   5: Train loss: 0.6595, Train acc: 98.73%, Test loss: 0.6950, Test acc: 9
 
 | Iteration | Epoch |
 |:--:|:--:|
-| ![LB_Loss_it](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/LB_Loss_it.png) | ![LB_Loss_ep](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/LB_Loss_ep.png) |
-| ![LB_Acc_it](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/LB_Acc_it.png) | ![LB_Acc_ep](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/LB_Acc_ep.png) |
+| ![LB_Loss_it](imgs/LB_Loss_it.png) | ![LB_Loss_ep](imgs/LB_Loss_ep.png) |
+| ![LB_Acc_it](imgs/LB_Acc_it.png) | ![LB_Acc_ep](imgs/LB_Acc_ep.png) |
 
 Elapsed time: 00:03:09
 
@@ -88,7 +88,7 @@ for _, dims in enumerate(nn_list):
 
 | | |
 |:--:|:--:|
-| ![Rand_Loss](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/Rand_loss.png) | ![Rand_Acc](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/Rand_acc.png) |
+| ![Rand_Loss](imgs/Rand_loss.png) | ![Rand_Acc](imgs/Rand_acc.png) |
 
 Last 5 epochs data:
 ```
@@ -106,7 +106,7 @@ Initial weight values all set to 0
 
 | | |
 |:--:|:--:|
-| ![Zero_loss](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/zero_loss.png) | ![Zero_Acc](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/zero_acc.png) |
+| ![Zero_loss](imgs/zero_loss.png) | ![Zero_Acc](imgs/zero_acc.png) |
 
 Due to Loss not showing any sign of decreasing, training was cut at epoch #10
 
@@ -133,7 +133,7 @@ for _, dims in enumerate(nn_list):
 
 | | |
 |:---:|:---:|
-| ![XN_Loss](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/xn_loss.png)  | ![XN_Acc](https://github.com/yuchen071/Feedforward-Classification-Network/blob/main/results/imgs/xn_acc.png) |
+| ![XN_Loss](imgs/xn_loss.png)  | ![XN_Acc](imgs/xn_acc.png) |
 
 
 Last 5 epochs data:
