@@ -120,7 +120,7 @@ Normal distributed random values with mean 0 and standard deviation
 
 $$ \sigma = \sqrt{\frac{2}{n_{in} + n_{out}}} $$
 
-where ![formula](https://render.githubusercontent.com/render/math?math=n_{in}) is the number of input nodes, and ![formula](https://render.githubusercontent.com/render/math?math=n_{out}) is the number of output nodes in the weight matrix
+where $n_{in}$ is the number of input nodes, and $n_{out}$ is the number of output nodes in the weight matrix
 
 Initialization code:
 
@@ -171,8 +171,7 @@ $$
 \sigma'(z^{(last)})\frac{\partial J}{\partial a^{(last)}} = \hat{y} - y
 $$
 
-For **weights with initial values of 0**, the partial derivative 
-$ \frac{\partial z^{(L+1)}_j}{\partial a^{(L)}_{j}} = w^{(L+1)}_{jk} = 0 $
+For **weights with initial values of 0**, the partial derivative $\frac{\partial z_j^{L+1}}{\partial a_j^{L}} = w^{(L+1)}_{jk} = 0$
 
 Therefore, the neural network is unable to update its parameters during back propagation. Thus, the Loss and Accuracy will always be stuck around the same values.
 
