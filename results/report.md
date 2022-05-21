@@ -118,7 +118,7 @@ Also known as **Glorot Normal** or **He Initialization**
 
 Normal distributed random values with mean 0 and standard deviation
 
-![formula](https://render.githubusercontent.com/render/math?math=%5Csigma%20%3D%20%5Csqrt%7B%5Cfrac%7B2%7D%7Bn_%7Bin%7D%20%2B%20n_%7Bout%7D%7D%7D&mode=display)
+$$ \sigma = \sqrt{\frac{2}{n_{in} + n_{out}}} $$
 
 where ![formula](https://render.githubusercontent.com/render/math?math=n_{in}) is the number of input nodes, and ![formula](https://render.githubusercontent.com/render/math?math=n_{out}) is the number of output nodes in the weight matrix
 
@@ -149,21 +149,30 @@ Epoch 200: Train loss: 0.0324, Train acc: 99.47%, Test loss: 0.0432, Test acc: 9
 
 From this formula for deriving the weight values:
 
-![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%3D%20%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%29%7D_j%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%5Cfrac%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D%7B%5Cpartial%20z%5E%7B%28L%29%7D_j%7D%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D&mode=display)
+$$ 
+\frac{\partial J}{\partial w^{(L)}_{jk}} = \frac{\partial z^{(L)}_j}{\partial w^{(L)}_{jk}} \frac{\partial a^{(L)}_j}{\partial z^{(L)}_j} \frac{\partial J}{\partial a^{(L)}_j} 
+$$
 
 we can get:
 
-![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20w%5E%7B%28L%29%7D_%7Bjk%7D%7D%20%3D%20a%5E%7B%28L-1%29%7D_k%20%5Csigma%27%28z%5E%7B%28L%29%7D_j%29%20%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D&mode=display)
+$$
+\frac{\partial J}{\partial w^{(L)}_{jk}} = a^{(L-1)}_k \sigma'(z^{(L)}_j) \frac{\partial J}{\partial a^{(L)}_j}
+$$
 
 where:
 
-![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_j%7D%20%3D%20%5Csum%5E%7Bn_%7BL%2B1%7D-1%7D_%7Bj%3D0%7D%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_%7Bj%7D%7D%20%5Cfrac%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D%20%3D%20%5Csum%5E%7Bn_%7BL%2B1%7D-1%7D_%7Bj%3D0%7D%20w%5E%7B%28L%2B1%29%7D_%7Bjk%7D%5Csigma%27%28z%5E%7B%28L%2B1%29%7D_j%29%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28L%2B1%29%7D_j%7D&mode=display)
+$$
+\frac{\partial J}{\partial a^{(L)}_j} = \sum^{n_{L+1}-1}_{j=0}\frac{\partial z^{(L+1)}_j}{\partial a^{(L)}_{j}} \frac{\partial a^{(L+1)}_j}{\partial z^{(L+1)}_j}\frac{\partial J}{\partial a^{(L+1)}_j} = \sum^{n_{L+1}-1}_{j=0} w^{(L+1)}_{jk}\sigma'(z^{(L+1)}_j)\frac{\partial J}{\partial a^{(L+1)}_j}
+$$
 
 or in this case at the last layer with Cross Entropy and Softmax:
 
-![formula](https://render.githubusercontent.com/render/math?math=%5Csigma%27%28z%5E%7B%28last%29%7D%29%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20a%5E%7B%28last%29%7D%7D%20%3D%20%5Chat%7By%7D%20-%20y&mode=display)
+$$
+\sigma'(z^{(last)})\frac{\partial J}{\partial a^{(last)}} = \hat{y} - y
+$$
 
-For **weights with initial values of 0**, the partial derivative ![formula](https://render.githubusercontent.com/render/math?math=%5Cfrac%7B%5Cpartial%20z%5E%7B%28L%2B1%29%7D_j%7D%7B%5Cpartial%20a%5E%7B%28L%29%7D_%7Bj%7D%7D%20%3D%20w%5E%7B%28L%2B1%29%7D_%7Bjk%7D%20%3D%200&mode=display).
+For **weights with initial values of 0**, the partial derivative 
+$ \frac{\partial z^{(L+1)}_j}{\partial a^{(L)}_{j}} = w^{(L+1)}_{jk} = 0 $
 
 Therefore, the neural network is unable to update its parameters during back propagation. Thus, the Loss and Accuracy will always be stuck around the same values.
 
